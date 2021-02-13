@@ -6,13 +6,18 @@
   "main": "priority-queue.js",
   "type": "module",
   "scripts": {
-    "test": "mocha test.js"
+    "test": "mocha test.js",
+    "prepublishOnly": "npm test"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mreinstein/priority-queue.git"
   },
-  "keywords": [],
+  "keywords": [
+    "priority",
+    "queue",
+    "heap"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
