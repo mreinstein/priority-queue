@@ -29,5 +29,8 @@
   },
   "dependencies": {
     "remove-array-items": "^2.0.1"
-  }
+  },
+  "engines": {
+    "node": ">=12.17"
+  },
 }
