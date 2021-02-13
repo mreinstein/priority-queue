@@ -1,0 +1,28 @@
+{
+  "name": "priority-queue",
+  "version": "1.0.0",
+  "private": true,
+  "description": "functional, data oriented priority queue that doesn't suck",
+  "main": "priority-queue.js",
+  "type": "module",
+  "scripts": {
+    "test": "mocha test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mreinstein/priority-queue.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mreinstein/priority-queue/issues"
+  },
+  "homepage": "https://github.com/mreinstein/priority-queue#readme",
+  "devDependencies": {
+    "mocha": "^8.3.0"
+  },
+  "dependencies": {
+    "remove-array-items": "^2.0.1"
+  }
+}
