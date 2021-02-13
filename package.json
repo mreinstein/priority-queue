@@ -19,7 +19,7 @@
     "heap"
   ],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/mreinstein/priority-queue/issues"
   },
