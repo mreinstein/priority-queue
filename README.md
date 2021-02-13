@@ -25,7 +25,7 @@ import PQ from 'priority-queue'
 
 // declarea a custom function for comparing the priority values of 2 items in the queue
 function comparator (a, b) {
-	return a < b ? true : false
+  return a < b ? true : false
 }
 
 // create a new priority queue that can hold a maximum of 20,000 items.

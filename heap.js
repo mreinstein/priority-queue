@@ -36,8 +36,8 @@ function callHeapify (heap) {
 
 function heapify (heap, parentInd) {
 	let largestInd = parentInd
-	let leftChildInd = 2 * parentInd + 1
-	let rightChildInd = 2 * parentInd + 2
+	const leftChildInd = 2 * parentInd + 1
+	const rightChildInd = 2 * parentInd + 2
 
 	// if child exists and is greater than parent
 	if (heap.length > leftChildInd && heap.comparator(getValue(heap.arr[parentInd]), getValue(heap.arr[leftChildInd])))
