@@ -1,5 +1,5 @@
-import Heap             from './heap.js'
-import removeArrayItems from 'remove-array-items'
+import Heap       from './heap.js'
+import removeItem from './remove-array-item.js'
 
 
 // creates a new priority queue data structure
@@ -50,7 +50,7 @@ function del (heap, k) {
 	if (ind < 0)
 		throw new Error('key does not exist!')
 
-	removeArrayItems(heap.arr, ind, 1)
+	removeItem(heap.arr, heap.length, ind)
 	heap.length--
     Heap.callHeapify(heap)
 }

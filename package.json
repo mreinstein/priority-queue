@@ -27,9 +27,7 @@
   "devDependencies": {
     "mocha": "^8.3.0"
   },
-  "dependencies": {
-    "remove-array-items": "^2.0.1"
-  },
+  "dependencies": {},
   "engines": {
     "node": ">=12.17"
   }

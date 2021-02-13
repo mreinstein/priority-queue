@@ -1,4 +1,4 @@
-import removeArrayItems from 'remove-array-items'
+import removeItem from './remove-array-item.js'
 
 
 // creates a new heap data structure
@@ -60,7 +60,7 @@ function poll (heap, dequeueHighest=true) {
 	const max = dequeueHighest ? heap.arr[0] : heap.arr[heap.length-1]
 
 	if (dequeueHighest)
-		removeArrayItems(heap.arr, 0, 1)
+		removeItem(heap.arr, heap.length, 0)
 
     heap.length--
     callHeapify(heap)
