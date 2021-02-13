@@ -2,6 +2,8 @@
 
 functional, data oriented priority queue that doesn't suck
 
+[![Build Status](https://travis-ci.org/mreinstein/priority-queue.svg?branch=main)](https://travis-ci.org/mreinstein/priority-queue)
+
 
 There are many priority queue implementations on the web, but I couldn't find any that meet these critera:
 
