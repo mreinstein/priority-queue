@@ -1,7 +1,6 @@
 {
   "name": "priority-queue",
-  "version": "1.0.0",
-  "private": true,
+  "version": "0.1.0",
   "description": "functional, data oriented priority queue that doesn't suck",
   "main": "priority-queue.js",
   "type": "module",
@@ -25,7 +24,7 @@
   },
   "homepage": "https://github.com/mreinstein/priority-queue#readme",
   "devDependencies": {
-    "mocha": "^8.3.0"
+    "mocha": "^8.3.2"
   },
   "dependencies": {},
   "engines": {
