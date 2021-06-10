@@ -78,14 +78,12 @@ function peek (heap, dequeueHighest=true) {
 
 
 function getValue (obj) {
-    return obj.priority ? obj.priority : obj.val // if priority is undefined then return val
+    return obj.priority ?? obj.val // if priority is undefined then return val
 }
 
 
 function swap (heap, i, j) {
-	const tmp = heap.arr[i]
-	heap.arr[i] = heap.arr[j]
-	heap.arr[j] = tmp
+	[heap.arr[i], heap.arr[j]] = [heap.arr[j], heap.arr[i]];
 }
 
 
