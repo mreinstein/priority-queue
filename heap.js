@@ -78,7 +78,7 @@ function peek (heap, dequeueHighest=true) {
 
 
 function getValue (obj) {
-    return obj.priority ?? obj.val // if priority is undefined then return val
+    return obj.priority ? obj.priority : obj.val // if priority is undefined then return val
 }
 
 
