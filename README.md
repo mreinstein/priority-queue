@@ -2,7 +2,7 @@
 
 functional, data oriented priority queue that doesn't suck
 
-[![Build Status](https://travis-ci.org/mreinstein/priority-queue.svg?branch=main)](https://travis-ci.org/mreinstein/priority-queue)
+![tests](https://github.com/mreinstein/priority-queue/actions/workflows/main.yml/badge.svg)
 
 
 There are many priority queue implementations on the web, but I couldn't find any that meet these critera:
