@@ -174,6 +174,24 @@ describe('test', () => {
       assert.deepEqual(PQ.list(obj)[2], a)
     })
 
+    it('should allow min-heap behavior with negative priority values', () => {
+      const obj = PQ.create()
+
+      // if we want to a min-heap (dequeue min value) we can do this by using negative signed priorities
+      const negate = (a) => -a
+
+      PQ.queue(obj, 'E', negate(0))
+      PQ.queue(obj, 'A', negate(4))
+      PQ.queue(obj, 'C', negate(1))
+      PQ.queue(obj, 'B', negate(2))
+      PQ.queue(obj, 'D', negate(0.34599))
+
+      const output = [ ]
+      for (let i=0; i < 5; i++)
+          output.push(PQ.dequeue(obj))
+
+      assert.deepEqual(output, [  'E', 'D', 'C', 'B', 'A' ])
+    })
 
     // https://github.com/mreinstein/priority-queue/issues/2
     it('should respect priority (gh issue #2)', () => {
