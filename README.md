@@ -23,15 +23,10 @@ So here we are!
 import PQ from 'priority-queue'
 
 
-// declarea a custom function for comparing the priority values of 2 items in the queue
-function comparator (a, b) {
-  return a < b ? true : false
-}
-
 // create a new priority queue that can hold a maximum of 20,000 items.
 // by default max length is 1000
 const MAX_LENGTH = 20000
-const obj = PQ.create(comparator, MAX_LENGTH)
+const obj = PQ.create(MAX_LENGTH)
 
 
 // insert a few items
@@ -46,18 +41,6 @@ console.log(PQ.dequeue(obj)) // 'e'
 
 // when the queue is empty it'll return undefined on dequeue
 console.log(PQ.dequeue(obj)) // undefined
-
-```
-
-
-By default dequeue will return the highest prioritied item in the queue first.
-If you want to get the lowest priority item instead, pass a 3rd boolean argument:
-
-```javascript
-const highest = PQ.dequeue(obj)
-
-GET_HIGHEST = false
-const lowest = PQ.dequeue(obj, GET_HIGHEST)
 ```
 
 
@@ -70,53 +53,29 @@ const lowest = PQ.dequeue(obj, GET_HIGHEST)
 * `delete` - If we need to update the priority, delete that item and insert it in again
 * `list` - contents of heap
 
-The Item stored in the queue should be class and a comparator should be provided.
 
-
-### If values in a queue are strings, comparator will receive priorities as a and b in the example below
-We need max priority element to be removed first.
-
-```javascript
-const comparator = function (a, b) {
-  return a >= b ? false : true
-}
-```
-
-An example would be:
-```javascript
-const obj = PriorityQueue.create(comparator)
-PQ.queue(obj, 'c', 1)
-PQ.queue(obj, 'b', 3)
-PQ.queue(obj, 'a', 5)
-
-console.log(PQ.dequeue(obj)) //'a'
-```
-
-
-### If values in the queue is an object, comparator will receive the object and you need to compare priorities
+### Using classes/objects
 
 ```javascript
 class Box {
   constructor(w, l) {
     this.w = w
     this.l = l
-    this.area = w * l //this is priority
-  }
-
-  comparator(a, b) {
-    return a.area >= b.area ? false : true
+    this.area = w * l // this is priority
   }
 }
     
-const obj = PQ.create(Box.prototype.comparator)
+const obj = PQ.create()
 const a = new Box(5, 5)
 const b = new Box(9, 9)
-PQ.queue(obj, a)
-PQ.queue(obj, new Box(2, 3))
-PQ.queue(obj, new Box(3, 3))
-PQ.queue(obj, b)
+const c = new Box(2, 3)
+const d = new Box(3, 3)
+
+PQ.queue(obj, a, a.area)
+PQ.queue(obj, c, c.area)
+PQ.queue(obj, d, d.area)
+PQ.queue(obj, b, b.area)
 
 assert.deepEqual(PQ.dequeue(obj), b)
 assert.deepEqual(PQ.dequeue(obj), a)
 ```
-
