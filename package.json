@@ -1,6 +1,6 @@
 {
   "name": "priority-queue",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "functional, data oriented priority queue that doesn't suck",
   "main": "priority-queue.js",
   "type": "module",

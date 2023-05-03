@@ -1,3 +1,6 @@
+## 0.2.1
+* fix critical crashing bug (issue #3)
+
 ## 0.2.0
 * BREAKING: queue(...) requires priority as the 3rd argument, no longer optional
 * BREAKING: comparator functions are removed. They are confusing and error-prone. Just pass a simple priority value instead
