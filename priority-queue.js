@@ -81,10 +81,10 @@ function _downHeap (heap, index) {
 
 		let largest = index
 
-		if (left <= heap.length && heap.arr[left].priority > heap.arr[largest].priority)
+		if (left < heap.length && heap.arr[left].priority > heap.arr[largest].priority)
 	        largest = left
 
-	    if (right <= heap.length && heap.arr[right].priority > heap.arr[largest].priority)
+	    if (right < heap.length && heap.arr[right].priority > heap.arr[largest].priority)
 	        largest = right
 	    
 	    if (largest === index)

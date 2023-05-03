@@ -115,6 +115,42 @@ describe('test', () => {
     assert.deepEqual(PQ.peek(obj), 'b')
   })
 
+  it('github issue #3', () => {
+    // this specific set of calls causes a crash
+    const obj = PQ.create()
+    PQ.queue(obj, 50, 0)
+    PQ.dequeue(obj)
+  
+    PQ.queue(obj, 49, -208.01627535185656)
+    PQ.queue(obj, 51, -210.25305660400815)
+    PQ.dequeue(obj)
+    PQ.queue(obj, 48, -224.8892169096033)
+    PQ.dequeue(obj)
+    
+    PQ.queue(obj, 0, -248.46823429680552)
+
+    PQ.queue(obj, 34, -228.26373397712936)
+    PQ.queue(obj, 35, -239.23167864379525)
+    PQ.queue(obj, 37, -266.89894250109546)
+    PQ.queue(obj, 86, -349.68815199723747)
+    PQ.queue(obj, 87, -365.64707670906125)
+
+    PQ.queue(obj, 113, -320.62073398614984)
+    PQ.queue(obj, 116, -420.20447008152644)
+    PQ.queue(obj, 114, -297.2795767836452)
+    
+    PQ.queue(obj, 115, -275.62135818236425)
+    PQ.queue(obj, 36, -252.2200007506263)
+    PQ.queue(obj, 79, -252.54674757055753)
+    PQ.queue(obj, 88, -382.0386737765449)
+    PQ.queue(obj, 8, -311.2518915300308)
+    PQ.dequeue(obj)
+
+    PQ.queue(obj, 110, -369.64947731728694)
+    
+    PQ.queue(obj, 0, -245.463916203665)
+  })
+
   describe('test with an object', () => {
     it('basic test', () => {
       const obj = PQ.create()
